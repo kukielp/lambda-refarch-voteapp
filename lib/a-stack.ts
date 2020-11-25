@@ -1,18 +1,26 @@
-import * as sns from '@aws-cdk/aws-sns';
-import * as subs from '@aws-cdk/aws-sns-subscriptions';
-import * as sqs from '@aws-cdk/aws-sqs';
 import * as cdk from '@aws-cdk/core';
+import * as lambda from '@aws-cdk/aws-lambda';
 
 export class AStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-    const queue = new sqs.Queue(this, 'AQueue', {
-      visibilityTimeout: cdk.Duration.seconds(300)
+    /**
+     * Lambda Construct for aggregate-votes
+     * **/
+    const lambdaAggregateVote = new lambda.Function(this, 'VoteAppAggregateVotes', {
+        runtime: lambda.Runtime.NODEJS_10_X,
+        handler: 'app.handler',
+        code: lambda.Code.fromAsset('lambda-functions/aggregate-votes'),
     });
 
-    const topic = new sns.Topic(this, 'ATopic');
-
-    topic.addSubscription(new subs.SqsSubscription(queue));
+      /**
+       * Lambda Construct for receive-vote
+       * **/
+      const lambdaReceiveVote = new lambda.Function(this, 'VoteAppReceiveVote', {
+          runtime: lambda.Runtime.NODEJS_10_X,
+          handler: 'app.handler',
+          code: lambda.Code.fromAsset('lambda-functions/receive-vote'),
+      });
   }
 }
