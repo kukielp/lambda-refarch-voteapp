@@ -20,22 +20,36 @@ export class AStack extends cdk.Stack {
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
     });
 
-    
-    //sample lambda - feel free to delete
-    const handler = new lambda.Function(this, "WidgetHandler", {
-      runtime: lambda.Runtime.NODEJS_10_X, // So we can use async in widget.js
-      code: lambda.Code.asset("resources"),
-      handler: "widgets.main"
-    });
-
-    
-
-    //security for DDB
-    AggregatesTable.grantReadWriteData(handler);
-    VotesTable.grantReadWriteData(handler);
 
     const pinpointProject = new pinpoint.CfnApp(this, "vote4cdk", {
       name: "vote4cdk"
     });
+
+      /**
+       * Lambda Construct for aggregate-votes
+       * **/
+      const lambdaAggregateVote = new lambda.Function(this, 'VoteAppAggregateVotes', {
+          runtime: lambda.Runtime.NODEJS_10_X,
+          handler: 'app.handler',
+          code: lambda.Code.fromAsset('lambda-functions/aggregate-votes'),
+      });
+      /**
+       * Lambda Construct for receive-vote
+       * **/
+      const lambdaReceiveVote = new lambda.Function(this, 'VoteAppReceiveVote', {
+          runtime: lambda.Runtime.NODEJS_10_X,
+          handler: 'app.handler',
+          code: lambda.Code.fromAsset('lambda-functions/receive-vote'),
+      });
+
+      /**
+       * Grant the APIGateway permissions to invoke VoteAppReceiveVote lambda
+       * **/
+      //lambdaReceiveVote.grantInvoke(APIGateway-goes-here)
+
+
+      //security for DDB
+      AggregatesTable.grantReadWriteData(lambdaAggregateVote);
+      VotesTable.grantReadWriteData(lambdaReceiveVote);
   }
 }

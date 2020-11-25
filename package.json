@@ -23,10 +23,11 @@
   },
   "dependencies": {
     "@aws-cdk/aws-dynamodb": "^1.75.0",
-    "@aws-cdk/aws-lambda": "^1.75.0",
-    "@aws-cdk/aws-sns": "1.66.0",
-    "@aws-cdk/aws-sns-subscriptions": "1.66.0",
-    "@aws-cdk/aws-sqs": "1.66.0",
-    "@aws-cdk/core": "1.66.0"
+    "@aws-cdk/aws-iam": "^1.75.0",
+    "@aws-cdk/aws-lambda": "^1.74.0",
+    "@aws-cdk/aws-sns": "1.74.0",
+    "@aws-cdk/aws-sns-subscriptions": "1.74.0",
+    "@aws-cdk/aws-sqs": "1.74.0",
+    "@aws-cdk/core": "1.74.0"
   }
 }
