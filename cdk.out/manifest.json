@@ -9,16 +9,11 @@
     },
     "vote4cdk": {
       "type": "aws:cloudformation:stack",
-<<<<<<< HEAD
-      "environment": "aws://392240548394/ap-southeast-2",
-=======
       "environment": "aws://674759208441/ap-southeast-2",
->>>>>>> develop-ts
       "properties": {
         "templateFile": "vote4cdk.template.json"
       },
       "metadata": {
-<<<<<<< HEAD
         "/vote4cdk": [
           {
             "type": "aws:cdk:asset",
@@ -32,30 +27,30 @@
               "artifactHashParameter": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5ArtifactHashA5BBD138"
             },
             "trace": [
-              "ConstructNode.addMetadata (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:160:23)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:31:35)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "ConstructNode.addMetadata (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:160:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:25:33)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
               "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
             ]
           },
@@ -71,472 +66,34 @@
               "artifactHashParameter": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5ArtifactHashBFDDAC90"
             },
             "trace": [
-              "ConstructNode.addMetadata (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:160:23)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:39:33)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
+              "ConstructNode.addMetadata (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/construct-compat.ts:431:92)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:160:23)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:34:31)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
               "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
             ]
           }
         ],
-        "/vote4cdk/VoteApp/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppAF22FC8B",
-            "trace": [
-              "new Table (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1058:18)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:13:24)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AggregatesTable/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AggregatesTable0F8EFB12",
-            "trace": [
-              "new Table (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1058:18)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:18:29)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/vote4cdk": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "vote4cdk",
-            "trace": [
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:24:29)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/VoteAppAggregateVotes/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppAggregateVotesServiceRoleF842BEB6",
-            "trace": [
-              "new Role (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:539:31)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:31:35)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/VoteAppAggregateVotes/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppAggregateVotesServiceRoleDefaultPolicyE4C33BDA",
-            "trace": [
-              "new Policy (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
-              "Role.addToPrincipalPolicy (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
-              "Function.addToPrincipal (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
-              "Table.combinedGrant (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:881:29)",
-              "Table.grantReadWriteData (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:665:17)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:52:23)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/VoteAppAggregateVotes/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppAggregateVotes00684366",
-            "trace": [
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:593:35)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:31:35)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/S3Bucket": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3Bucket2596567B",
-            "trace": [
-              "new FileAssetParameters (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:31:35)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/S3VersionKey": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3VersionKey92E0EC3A",
-            "trace": [
-              "new FileAssetParameters (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:31:35)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/ArtifactHash": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5ArtifactHashA5BBD138",
-            "trace": [
-              "new FileAssetParameters (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:31:35)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/S3Bucket": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3Bucket2EDE1A49",
-            "trace": [
-              "new FileAssetParameters (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:39:33)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/S3VersionKey": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3VersionKey2CC89ABD",
-            "trace": [
-              "new FileAssetParameters (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:39:33)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/ArtifactHash": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5ArtifactHashBFDDAC90",
-            "trace": [
-              "new FileAssetParameters (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
-              "LegacyStackSynthesizer.doAddFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
-              "AStack.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
-              "LegacyStackSynthesizer.addFileAsset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
-              "new Asset (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:147:40)",
-              "AssetCode.bind (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:39:33)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/VoteAppReceiveVote/ServiceRole/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppReceiveVoteServiceRoleF185E41C",
-            "trace": [
-              "new Role (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:539:31)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:39:33)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/VoteAppReceiveVote/ServiceRole/DefaultPolicy/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppReceiveVoteServiceRoleDefaultPolicy2C4ABA5F",
-            "trace": [
-              "new Policy (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
-              "Role.addToPrincipalPolicy (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
-              "Function.addToPrincipal (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
-              "Table.combinedGrant (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:881:29)",
-              "Table.grantReadWriteData (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:665:17)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:53:18)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
-            ]
-          }
-        ],
-        "/vote4cdk/VoteAppReceiveVote/Resource": [
-          {
-            "type": "aws:cdk:logicalId",
-            "data": "VoteAppReceiveVote8093A728",
-            "trace": [
-              "new Function (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:593:35)",
-              "new AStack (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/lib/a-stack.ts:39:33)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/bin/a.ts:7:1)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Module.m._compile (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
-              "Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Object.require.extensions.<computed> [as .ts] (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-              "main (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
-              "Object.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
-              "Module._compile (internal/modules/cjs/loader.js:1256:30)",
-              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1277:10)",
-              "Module.load (internal/modules/cjs/loader.js:1105:32)",
-              "Function.Module._load (internal/modules/cjs/loader.js:967:14)",
-              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:60:12)",
-=======
         "/vote4cdk/VoteApp/Resource": [
           {
             "type": "aws:cdk:logicalId",
@@ -559,34 +116,15 @@
               "Module.load (internal/modules/cjs/loader.js:986:32)",
               "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
               "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
->>>>>>> develop-ts
               "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
             ]
           }
         ],
-<<<<<<< HEAD
-        "/vote4cdk/CDKMetadata/Default": [
-=======
         "/vote4cdk/AggregatesTable/Resource": [
->>>>>>> develop-ts
           {
             "type": "aws:cdk:logicalId",
             "data": "AggregatesTable0F8EFB12",
             "trace": [
-<<<<<<< HEAD
-              "new MetadataResource (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
-              "/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
-              "visit (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
-              "visit (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
-              "injectMetadataResources (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
-              "Object.synthesize (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
-              "App.synth (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stage.ts:188:23)",
-              "process.<anonymous> (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
-              "Object.onceWrapper (events.js:421:26)",
-              "process.emit (events.js:314:20)",
-              "process.EventEmitter.emit (domain.js:486:12)",
-              "process.emit (/Users/maykyaw/Documents/work/lab/lambda-refarch-voteapp/node_modules/source-map-support/source-map-support.js:495:21)"
-=======
               "new Table (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:1058:18)",
               "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:19:29)",
               "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
@@ -608,14 +146,402 @@
             ]
           }
         ],
-        "/vote4cdk/WidgetHandler/ServiceRole/Resource": [
+        "/vote4cdk/VoteAppAggregateVotes/ServiceRole/Resource": [
           {
             "type": "aws:cdk:logicalId",
-            "data": "WidgetHandlerServiceRole455C9244",
+            "data": "VoteAppAggregateVotesServiceRoleF842BEB6",
             "trace": [
               "new Role (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
               "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:539:31)",
-              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:26:21)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:25:33)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/VoteAppAggregateVotes/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VoteAppAggregateVotesServiceRoleDefaultPolicyE4C33BDA",
+            "trace": [
+              "new Policy (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Table.combinedGrant (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:881:29)",
+              "Table.grantReadWriteData (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:665:17)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:42:16)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/VoteAppAggregateVotes/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VoteAppAggregateVotes00684366",
+            "trace": [
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:593:35)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:25:33)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3Bucket2596567B",
+            "trace": [
+              "new FileAssetParameters (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:25:33)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3VersionKey92E0EC3A",
+            "trace": [
+              "new FileAssetParameters (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:25:33)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5ArtifactHashA5BBD138",
+            "trace": [
+              "new FileAssetParameters (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:25:33)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/S3Bucket": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3Bucket2EDE1A49",
+            "trace": [
+              "new FileAssetParameters (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:16:32)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:34:31)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/S3VersionKey": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3VersionKey2CC89ABD",
+            "trace": [
+              "new FileAssetParameters (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:21:31)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:34:31)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/ArtifactHash": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5ArtifactHashBFDDAC90",
+            "trace": [
+              "new FileAssetParameters (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/asset-parameters.ts:26:34)",
+              "LegacyStackSynthesizer.doAddFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:147:16)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:71:19)",
+              "AStack.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack.ts:651:29)",
+              "LegacyStackSynthesizer.addFileAsset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stack-synthesizers/legacy.ts:75:25)",
+              "new Asset (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-s3-assets/lib/asset.ts:139:40)",
+              "AssetCode.bind (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/code.ts:180:20)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:559:29)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:34:31)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/VoteAppReceiveVote/ServiceRole/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VoteAppReceiveVoteServiceRoleF185E41C",
+            "trace": [
+              "new Role (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/role.ts:327:18)",
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:539:31)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:34:31)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/VoteAppReceiveVote/ServiceRole/DefaultPolicy/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VoteAppReceiveVoteServiceRoleDefaultPolicy2C4ABA5F",
+            "trace": [
+              "new Policy (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/policy.ts:154:22)",
+              "Role.addToPrincipalPolicy (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/role.ts:368:28)",
+              "Function.addToPrincipal (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-iam/lib/grant.ts:168:61)",
+              "Table.combinedGrant (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:881:29)",
+              "Table.grantReadWriteData (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-dynamodb/lib/table.ts:665:17)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:41:21)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/VoteAppReceiveVote/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "VoteAppReceiveVote8093A728",
+            "trace": [
+              "new Function (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-lambda/lib/function.ts:593:35)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:34:31)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/vote4cdk": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "vote4cdk",
+            "trace": [
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:45:29)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/vote4cdk/Topic/Resource": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "TopicBFC7AF6E",
+            "trace": [
+              "new Topic (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/aws-sns/lib/topic.ts:69:22)",
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:50:19)",
               "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:7:1)",
               "Module._compile (internal/modules/cjs/loader.js:1138:30)",
               "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
@@ -653,7 +579,6 @@
               "process.EventEmitter.emit (domain.js:482:12)",
               "process.emit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/source-map-support/source-map-support.js:495:21)",
               "process.topLevelDomainCallback (domain.js:137:15)"
->>>>>>> develop-ts
             ]
           }
         ]
