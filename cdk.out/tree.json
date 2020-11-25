@@ -12,27 +12,122 @@
         "id": "vote4cdk",
         "path": "vote4cdk",
         "children": {
-          "vote4cdk": {
-            "id": "vote4cdk",
-            "path": "vote4cdk/vote4cdk",
-            "attributes": {
-              "aws:cdk:cloudformation:type": "AWS::Pinpoint::App",
-              "aws:cdk:cloudformation:props": {
-                "name": "vote4cdk"
-              }
-            }
-          },
-          "Topic": {
-            "id": "Topic",
-            "path": "vote4cdk/Topic",
+          "VoteApp": {
+            "id": "VoteApp",
+            "path": "vote4cdk/VoteApp",
             "children": {
               "Resource": {
                 "id": "Resource",
-                "path": "vote4cdk/Topic/Resource",
+                "path": "vote4cdk/VoteApp/Resource",
                 "attributes": {
-                  "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
                   "aws:cdk:cloudformation:props": {
-                    "displayName": "Pinpoint Incomming subscription topic"
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "vote4cdk/VoteApp/ScalingRole"
+              }
+            }
+          },
+          "AggregatesTable": {
+            "id": "AggregatesTable",
+            "path": "vote4cdk/AggregatesTable",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "vote4cdk/AggregatesTable/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "vote4cdk/AggregatesTable/ScalingRole"
+              }
+            }
+          },
+          "WidgetHandler": {
+            "id": "WidgetHandler",
+            "path": "vote4cdk/WidgetHandler",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "vote4cdk/WidgetHandler/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "vote4cdk/WidgetHandler/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "vote4cdk/WidgetHandler/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "vote4cdk/WidgetHandler/Code/Stage"
                   }
                 }
               }

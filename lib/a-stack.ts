@@ -2,7 +2,6 @@ import * as cdk from '@aws-cdk/core';
 import * as sns from '@aws-cdk/aws-sns';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import * as lambda from '@aws-cdk/aws-lambda';
-
 const pinpoint =  require("@aws-cdk/aws-pinpoint");
 
 
@@ -29,8 +28,6 @@ export class AStack extends cdk.Stack {
       code: lambda.Code.asset("resources"),
       handler: "widgets.main"
     });
-
-    
 
     //security for DDB
     AggregatesTable.grantReadWriteData(handler);
