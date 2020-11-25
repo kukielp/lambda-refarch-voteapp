@@ -1,8 +1,8 @@
-
 import * as cdk from '@aws-cdk/core';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import * as lambda from '@aws-cdk/aws-lambda';
 
+const pinpoint =  require("@aws-cdk/aws-pinpoint");
 
 export class AStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -34,5 +34,8 @@ export class AStack extends cdk.Stack {
     AggregatesTable.grantReadWriteData(handler);
     VotesTable.grantReadWriteData(handler);
 
+    const pinpointProject = new pinpoint.CfnApp(this, "vote4cdk", {
+      name: "vote4cdk"
+    });
   }
 }
