@@ -1,0 +1,43 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "AStack": {
+        "id": "AStack",
+        "path": "AStack",
+        "children": {
+          "project": {
+            "id": "project",
+            "path": "AStack/project",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Pinpoint::App",
+              "aws:cdk:cloudformation:props": {
+                "name": "vote4cdk"
+              }
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "AStack/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "AStack/CDKMetadata/Default"
+              },
+              "Condition": {
+                "id": "Condition",
+                "path": "AStack/CDKMetadata/Condition"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
