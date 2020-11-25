@@ -39,9 +39,9 @@ export class AStack extends cdk.Stack {
     });
 
     //security for DDB
-    AggregatesTable.grantReadWriteData(lambdaReceiveVote);
-    VotesTable.grantReadWriteData(lambdaAggregateVote);
-
+    VotesTable.grantReadWriteData(lambdaReceiveVote);
+    AggregatesTable.grantReadWriteData(lambdaAggregateVote);
+    
     //Pinpoint Project
     const pinpointProject = new pinpoint.CfnApp(this, "vote4cdk", {
       name: "vote4cdk"
