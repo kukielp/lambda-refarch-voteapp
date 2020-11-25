@@ -1,6 +1,7 @@
 import * as cdk from '@aws-cdk/core';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import * as lambda from '@aws-cdk/aws-lambda';
+import * as cognito from '@aws-cdk/aws-cognito';
 
 const pinpoint =  require("@aws-cdk/aws-pinpoint");
 
@@ -8,6 +9,14 @@ export class AStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
+
+    //cognito
+    const idp = new cognito.CfnIdentityPool(this, "voting-cognito", {
+      //allow access to unauthenticated identities
+      allowUnauthenticatedIdentities: true
+    });
+    //this is needed by the web UI
+    var identity_pool_id = idp.openIdConnectProviderArns;
 
     //dynamo tables
     const VotesTable = new dynamodb.Table(this, 'VoteApp', {
@@ -18,12 +27,15 @@ export class AStack extends cdk.Stack {
       billingMode: dynamodb.BillingMode.PROVISIONED,
       readCapacity: 1,
       writeCapacity: 1,
-      encryption: dynamodb.TableEncryption.AWS_MANAGED      
+      encryption: dynamodb.TableEncryption.AWS_MANAGED
     });
   
 
     const AggregatesTable = new dynamodb.Table(this, 'AggregatesTable', {
-      partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
+      partitionKey: { 
+        name: 'id', 
+        type: dynamodb.AttributeType.STRING 
+      },
       billingMode: dynamodb.BillingMode.PROVISIONED,
       readCapacity: 1,
       writeCapacity: 1,
