@@ -13,12 +13,12 @@ export class AStack extends cdk.Stack {
 
     //dynamo tables
     const VotesTable = new dynamodb.Table(this, 'VoteApp', {
-      partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
+      partitionKey: { name: 'VotedFor', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
     });
    
     const AggregatesTable = new dynamodb.Table(this, 'AggregatesTable', {
-      partitionKey: { name: 'id', type: dynamodb.AttributeType.STRING },
+      partitionKey: { name: 'VotedFor', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
     });
 
