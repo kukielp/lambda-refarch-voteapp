@@ -76,6 +76,7 @@
               }
             }
           },
+<<<<<<< HEAD
           "vote4cdk": {
             "id": "vote4cdk",
             "path": "vote4cdk/vote4cdk",
@@ -83,6 +84,62 @@
               "aws:cdk:cloudformation:type": "AWS::Pinpoint::App",
               "aws:cdk:cloudformation:props": {
                 "name": "vote4cdk"
+=======
+          "WidgetHandler": {
+            "id": "WidgetHandler",
+            "path": "vote4cdk/WidgetHandler",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "vote4cdk/WidgetHandler/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "vote4cdk/WidgetHandler/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "vote4cdk/WidgetHandler/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "vote4cdk/WidgetHandler/Code/Stage"
+                  }
+                }
+>>>>>>> develop-ts
               }
             }
           },
