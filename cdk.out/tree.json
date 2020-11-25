@@ -8,13 +8,13 @@
         "id": "Tree",
         "path": "Tree"
       },
-      "AStack": {
-        "id": "AStack",
-        "path": "AStack",
+      "vote4cdk": {
+        "id": "vote4cdk",
+        "path": "vote4cdk",
         "children": {
-          "project": {
-            "id": "project",
-            "path": "AStack/project",
+          "vote4cdk": {
+            "id": "vote4cdk",
+            "path": "vote4cdk/vote4cdk",
             "attributes": {
               "aws:cdk:cloudformation:type": "AWS::Pinpoint::App",
               "aws:cdk:cloudformation:props": {
@@ -22,17 +22,29 @@
               }
             }
           },
+          "Topic": {
+            "id": "Topic",
+            "path": "vote4cdk/Topic",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "vote4cdk/Topic/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::SNS::Topic",
+                  "aws:cdk:cloudformation:props": {
+                    "displayName": "Pinpoint Incomming subscription topic"
+                  }
+                }
+              }
+            }
+          },
           "CDKMetadata": {
             "id": "CDKMetadata",
-            "path": "AStack/CDKMetadata",
+            "path": "vote4cdk/CDKMetadata",
             "children": {
               "Default": {
                 "id": "Default",
-                "path": "AStack/CDKMetadata/Default"
-              },
-              "Condition": {
-                "id": "Condition",
-                "path": "AStack/CDKMetadata/Condition"
+                "path": "vote4cdk/CDKMetadata/Default"
               }
             }
           }
