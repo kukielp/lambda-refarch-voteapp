@@ -1,0 +1,481 @@
+{
+  "version": "tree-0.1",
+  "tree": {
+    "id": "App",
+    "path": "",
+    "children": {
+      "Tree": {
+        "id": "Tree",
+        "path": "Tree"
+      },
+      "vote4cdk": {
+        "id": "vote4cdk",
+        "path": "vote4cdk",
+        "children": {
+          "VoteApp": {
+            "id": "VoteApp",
+            "path": "vote4cdk/VoteApp",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "vote4cdk/VoteApp/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "vote4cdk/VoteApp/ScalingRole"
+              }
+            }
+          },
+          "AggregatesTable": {
+            "id": "AggregatesTable",
+            "path": "vote4cdk/AggregatesTable",
+            "children": {
+              "Resource": {
+                "id": "Resource",
+                "path": "vote4cdk/AggregatesTable/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::DynamoDB::Table",
+                  "aws:cdk:cloudformation:props": {
+                    "keySchema": [
+                      {
+                        "attributeName": "id",
+                        "keyType": "HASH"
+                      }
+                    ],
+                    "attributeDefinitions": [
+                      {
+                        "attributeName": "id",
+                        "attributeType": "S"
+                      }
+                    ],
+                    "billingMode": "PAY_PER_REQUEST"
+                  }
+                }
+              },
+              "ScalingRole": {
+                "id": "ScalingRole",
+                "path": "vote4cdk/AggregatesTable/ScalingRole"
+              }
+            }
+          },
+          "vote4cdk": {
+            "id": "vote4cdk",
+            "path": "vote4cdk/vote4cdk",
+            "attributes": {
+              "aws:cdk:cloudformation:type": "AWS::Pinpoint::App",
+              "aws:cdk:cloudformation:props": {
+                "name": "vote4cdk"
+              }
+            }
+          },
+          "VoteAppAggregateVotes": {
+            "id": "VoteAppAggregateVotes",
+            "path": "vote4cdk/VoteAppAggregateVotes",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "vote4cdk/VoteAppAggregateVotes/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "vote4cdk/VoteAppAggregateVotes/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "vote4cdk/VoteAppAggregateVotes/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "vote4cdk/VoteAppAggregateVotes/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchGetItem",
+                                    "dynamodb:GetRecords",
+                                    "dynamodb:GetShardIterator",
+                                    "dynamodb:Query",
+                                    "dynamodb:GetItem",
+                                    "dynamodb:Scan",
+                                    "dynamodb:BatchWriteItem",
+                                    "dynamodb:PutItem",
+                                    "dynamodb:UpdateItem",
+                                    "dynamodb:DeleteItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "AggregatesTable0F8EFB12",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "VoteAppAggregateVotesServiceRoleDefaultPolicyE4C33BDA",
+                            "roles": [
+                              {
+                                "Ref": "VoteAppAggregateVotesServiceRoleF842BEB6"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "vote4cdk/VoteAppAggregateVotes/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "vote4cdk/VoteAppAggregateVotes/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "vote4cdk/VoteAppAggregateVotes/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "vote4cdk/VoteAppAggregateVotes/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3Bucket2596567B"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3VersionKey92E0EC3A"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParametersbad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5S3VersionKey92E0EC3A"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "app.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "VoteAppAggregateVotesServiceRoleF842BEB6",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "nodejs10.x"
+                  }
+                }
+              }
+            }
+          },
+          "AssetParameters": {
+            "id": "AssetParameters",
+            "path": "vote4cdk/AssetParameters",
+            "children": {
+              "bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5": {
+                "id": "bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5",
+                "path": "vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "vote4cdk/AssetParameters/bad196d04477ba01f2b601f7e97396ea98c5cd7b46846bdec7989aa1af95faf5/ArtifactHash"
+                  }
+                }
+              },
+              "eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5": {
+                "id": "eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5",
+                "path": "vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5",
+                "children": {
+                  "S3Bucket": {
+                    "id": "S3Bucket",
+                    "path": "vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/S3Bucket"
+                  },
+                  "S3VersionKey": {
+                    "id": "S3VersionKey",
+                    "path": "vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/S3VersionKey"
+                  },
+                  "ArtifactHash": {
+                    "id": "ArtifactHash",
+                    "path": "vote4cdk/AssetParameters/eebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5/ArtifactHash"
+                  }
+                }
+              }
+            }
+          },
+          "VoteAppReceiveVote": {
+            "id": "VoteAppReceiveVote",
+            "path": "vote4cdk/VoteAppReceiveVote",
+            "children": {
+              "ServiceRole": {
+                "id": "ServiceRole",
+                "path": "vote4cdk/VoteAppReceiveVote/ServiceRole",
+                "children": {
+                  "Resource": {
+                    "id": "Resource",
+                    "path": "vote4cdk/VoteAppReceiveVote/ServiceRole/Resource",
+                    "attributes": {
+                      "aws:cdk:cloudformation:type": "AWS::IAM::Role",
+                      "aws:cdk:cloudformation:props": {
+                        "assumeRolePolicyDocument": {
+                          "Statement": [
+                            {
+                              "Action": "sts:AssumeRole",
+                              "Effect": "Allow",
+                              "Principal": {
+                                "Service": "lambda.amazonaws.com"
+                              }
+                            }
+                          ],
+                          "Version": "2012-10-17"
+                        },
+                        "managedPolicyArns": [
+                          {
+                            "Fn::Join": [
+                              "",
+                              [
+                                "arn:",
+                                {
+                                  "Ref": "AWS::Partition"
+                                },
+                                ":iam::aws:policy/service-role/AWSLambdaBasicExecutionRole"
+                              ]
+                            ]
+                          }
+                        ]
+                      }
+                    }
+                  },
+                  "DefaultPolicy": {
+                    "id": "DefaultPolicy",
+                    "path": "vote4cdk/VoteAppReceiveVote/ServiceRole/DefaultPolicy",
+                    "children": {
+                      "Resource": {
+                        "id": "Resource",
+                        "path": "vote4cdk/VoteAppReceiveVote/ServiceRole/DefaultPolicy/Resource",
+                        "attributes": {
+                          "aws:cdk:cloudformation:type": "AWS::IAM::Policy",
+                          "aws:cdk:cloudformation:props": {
+                            "policyDocument": {
+                              "Statement": [
+                                {
+                                  "Action": [
+                                    "dynamodb:BatchGetItem",
+                                    "dynamodb:GetRecords",
+                                    "dynamodb:GetShardIterator",
+                                    "dynamodb:Query",
+                                    "dynamodb:GetItem",
+                                    "dynamodb:Scan",
+                                    "dynamodb:BatchWriteItem",
+                                    "dynamodb:PutItem",
+                                    "dynamodb:UpdateItem",
+                                    "dynamodb:DeleteItem"
+                                  ],
+                                  "Effect": "Allow",
+                                  "Resource": [
+                                    {
+                                      "Fn::GetAtt": [
+                                        "VoteAppAF22FC8B",
+                                        "Arn"
+                                      ]
+                                    },
+                                    {
+                                      "Ref": "AWS::NoValue"
+                                    }
+                                  ]
+                                }
+                              ],
+                              "Version": "2012-10-17"
+                            },
+                            "policyName": "VoteAppReceiveVoteServiceRoleDefaultPolicy2C4ABA5F",
+                            "roles": [
+                              {
+                                "Ref": "VoteAppReceiveVoteServiceRoleF185E41C"
+                              }
+                            ]
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              },
+              "Code": {
+                "id": "Code",
+                "path": "vote4cdk/VoteAppReceiveVote/Code",
+                "children": {
+                  "Stage": {
+                    "id": "Stage",
+                    "path": "vote4cdk/VoteAppReceiveVote/Code/Stage"
+                  },
+                  "AssetBucket": {
+                    "id": "AssetBucket",
+                    "path": "vote4cdk/VoteAppReceiveVote/Code/AssetBucket"
+                  }
+                }
+              },
+              "Resource": {
+                "id": "Resource",
+                "path": "vote4cdk/VoteAppReceiveVote/Resource",
+                "attributes": {
+                  "aws:cdk:cloudformation:type": "AWS::Lambda::Function",
+                  "aws:cdk:cloudformation:props": {
+                    "code": {
+                      "s3Bucket": {
+                        "Ref": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3Bucket2EDE1A49"
+                      },
+                      "s3Key": {
+                        "Fn::Join": [
+                          "",
+                          [
+                            {
+                              "Fn::Select": [
+                                0,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3VersionKey2CC89ABD"
+                                    }
+                                  ]
+                                }
+                              ]
+                            },
+                            {
+                              "Fn::Select": [
+                                1,
+                                {
+                                  "Fn::Split": [
+                                    "||",
+                                    {
+                                      "Ref": "AssetParameterseebef67c50573ae17861f8d8b871b715a0db74e2d34d552ff367b54f23e01de5S3VersionKey2CC89ABD"
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        ]
+                      }
+                    },
+                    "handler": "app.handler",
+                    "role": {
+                      "Fn::GetAtt": [
+                        "VoteAppReceiveVoteServiceRoleF185E41C",
+                        "Arn"
+                      ]
+                    },
+                    "runtime": "nodejs10.x"
+                  }
+                }
+              }
+            }
+          },
+          "CDKMetadata": {
+            "id": "CDKMetadata",
+            "path": "vote4cdk/CDKMetadata",
+            "children": {
+              "Default": {
+                "id": "Default",
+                "path": "vote4cdk/CDKMetadata/Default"
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
