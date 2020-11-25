@@ -1,0 +1,87 @@
+{
+  "version": "6.0.0",
+  "artifacts": {
+    "Tree": {
+      "type": "cdk:tree",
+      "properties": {
+        "file": "tree.json"
+      }
+    },
+    "AStack": {
+      "type": "aws:cloudformation:stack",
+      "environment": "aws://unknown-account/unknown-region",
+      "properties": {
+        "templateFile": "AStack.template.json"
+      },
+      "metadata": {
+        "/AStack/project": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "project",
+            "trace": [
+              "new AStack (/Users/kukiel/workspace/lambda-refarch-voteapp/lib/a-stack.ts:8:29)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/bin/a.ts:6:1)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Module.m._compile (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:858:23)",
+              "Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Object.require.extensions.<computed> [as .ts] (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/index.ts:861:12)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "main (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:227:14)",
+              "Object.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/ts-node/src/bin.ts:513:3)",
+              "Module._compile (internal/modules/cjs/loader.js:1138:30)",
+              "Object.Module._extensions..js (internal/modules/cjs/loader.js:1158:10)",
+              "Module.load (internal/modules/cjs/loader.js:986:32)",
+              "Function.Module._load (internal/modules/cjs/loader.js:879:14)",
+              "Function.executeUserEntryPoint [as runMain] (internal/modules/run_main.js:71:12)",
+              "/usr/local/lib/node_modules/npm/node_modules/libnpx/index.js:268:14"
+            ]
+          }
+        ],
+        "/AStack/CDKMetadata/Default": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadata",
+            "trace": [
+              "new MetadataResource (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:51:24)",
+              "/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stage.ts:174:23)",
+              "process.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:482:12)",
+              "process.emit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/source-map-support/source-map-support.js:495:21)",
+              "process.topLevelDomainCallback (domain.js:137:15)"
+            ]
+          }
+        ],
+        "/AStack/CDKMetadata/Condition": [
+          {
+            "type": "aws:cdk:logicalId",
+            "data": "CDKMetadataAvailable",
+            "trace": [
+              "new MetadataResource (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/metadata-resource.ts:60:27)",
+              "/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:140:5",
+              "visit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:200:5)",
+              "visit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:196:5)",
+              "injectMetadataResources (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:131:3)",
+              "Object.synthesize (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/private/synthesis.ts:18:3)",
+              "App.synth (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/stage.ts:174:23)",
+              "process.<anonymous> (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/@aws-cdk/core/lib/app.ts:123:45)",
+              "Object.onceWrapper (events.js:422:26)",
+              "process.emit (events.js:315:20)",
+              "process.EventEmitter.emit (domain.js:482:12)",
+              "process.emit (/Users/kukiel/workspace/lambda-refarch-voteapp/node_modules/source-map-support/source-map-support.js:495:21)",
+              "process.topLevelDomainCallback (domain.js:137:15)"
+            ]
+          }
+        ]
+      }
+    }
+  }
+}
