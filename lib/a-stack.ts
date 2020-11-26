@@ -1,9 +1,11 @@
 import * as cdk from '@aws-cdk/core';
+import * as sns from '@aws-cdk/aws-sns';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as cognito from '@aws-cdk/aws-cognito';
 
 const pinpoint =  require("@aws-cdk/aws-pinpoint");
+
 
 export class AStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
@@ -50,14 +52,19 @@ export class AStack extends cdk.Stack {
       handler: "widgets.main"
     });
 
-    
-
     //security for DDB
     AggregatesTable.grantReadWriteData(handler);
     VotesTable.grantReadWriteData(handler);
 
+    //Pinpoint Project
     const pinpointProject = new pinpoint.CfnApp(this, "vote4cdk", {
       name: "vote4cdk"
     });
+
+    //Pipoint SNS topic
+    const topic = new sns.Topic(this, 'Topic', {
+      displayName: 'Pinpoint Incomming subscription topic'
+    });
+
   }
 }
