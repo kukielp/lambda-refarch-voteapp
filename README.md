@@ -12,9 +12,10 @@ By combining AWS Lambda with other AWS services, developers can build powerful w
 
 This example looks at using AWS Lambda and Amazon API Gateway to build a dynamic voting application, which receives votes via SMS, aggregates the totals into Amazon DynamoDB, and uses Amazon Simple Storage Service (Amazon S3)to display the results in real time.
 
-The architecture described in this [diagram](https://s3.amazonaws.com/awslambda-reference-architectures/web-app/lambda-refarch-webapp.pdf) can be created with an AWS CloudFormation template.
+The architecture described in this Diagram:
 
-[The template](https://s3.amazonaws.com/awslambda-reference-architectures/web-app/lambda_webapp.template) does the following:
+![diagram](Vote.png) 
+
 
 - Creates an S3 bucket named <S3BucketName\> to hold your web app.
 - Creates a DynamoDB table named `VoteApp` to store votes
@@ -28,7 +29,9 @@ The architecture described in this [diagram](https://s3.amazonaws.com/awslambda-
 The services and resources configured by the AWS CloudFormation template can be tested with the HTML page `index.html`, which relies on the HTML, JavaScript, and CSS files found in this repo. You can copy these files to the S3 bucket created by the AWS CloudFormation script.
 
 ## Instructions
-**Important:** The provided CloudFormation template retreives its Lambda code from a bucket in the us-east-1 region. To launch this sample in another region, please modify the template and upload the Lambda code to a bucket in that region.
+**Important:** 
+
+{cdk} instructions here
 
 This example demonstrates receiving votes via text message from users via a phone number. To duplicate the system built by this architecture, you will need to set up a phone number with a third party, like [Twilio](http://twilio.com). For full details, read [our post](https://medium.com/aws-activate-startup-blog/building-dynamic-dashboards-using-aws-lambda-and-amazon-dynamodb-streams-part-ii-b2d883bebde5) on the [AWS Startup Collection at Medium](https://medium.com/aws-activate-startup-blog).
 
