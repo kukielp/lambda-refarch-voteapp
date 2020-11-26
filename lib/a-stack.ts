@@ -2,10 +2,12 @@ import * as cdk from '@aws-cdk/core';
 import * as sns from '@aws-cdk/aws-sns';
 import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import * as lambda from '@aws-cdk/aws-lambda';
+import { DynamoEventSource, SqsDlq } from '@aws-cdk/aws-lambda-event-sources';
 import * as cognito from '@aws-cdk/aws-cognito';
 import * as apigw from '@aws-cdk/aws-apigateway';
 import * as iam from '@aws-cdk/aws-iam';
 import { Effect, PolicyStatement } from '@aws-cdk/aws-iam';
+import * as sqs from '@aws-cdk/aws-sqs';
 
 const pinpoint =  require("@aws-cdk/aws-pinpoint");
 
@@ -24,7 +26,8 @@ export class AStack extends cdk.Stack {
     //dynamo tables
     const VotesTable = new dynamodb.Table(this, 'VoteApp', {
       partitionKey: { name: 'VotedFor', type: dynamodb.AttributeType.STRING },
-      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
+      billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
+      stream: dynamodb.StreamViewType.NEW_IMAGE // make sure stream is configured
     });
   
 
@@ -39,6 +42,18 @@ export class AStack extends cdk.Stack {
       handler: 'app.handler',
       code: lambda.Code.fromAsset('lambda-functions/aggregate-votes'),
     });
+
+    //hook up aggregate vote to aggregate table stream
+    const deadLetterQueue = new sqs.Queue(this, 'deadLetterQueue');
+    lambdaAggregateVote.addEventSource(new DynamoEventSource(VotesTable, {
+      startingPosition: lambda.StartingPosition.TRIM_HORIZON,
+      batchSize: 5,
+      bisectBatchOnError: true,
+      onFailure: new SqsDlq(deadLetterQueue),
+      retryAttempts: 10
+    }));
+
+    VotesTable.grantStreamRead(lambdaAggregateVote);
  
     /**
      * Lambda Construct for receive-vote
@@ -58,7 +73,7 @@ export class AStack extends cdk.Stack {
       name: "vote4cdk"
     });
 
-    //Pipoint SNS topic
+    //Pinpoint SNS topic
     const topic = new sns.Topic(this, 'Topic', {
       displayName: 'Pinpoint Incomming subscription topic'
     });
@@ -105,6 +120,8 @@ export class AStack extends cdk.Stack {
        userPool: userPool,
        userPoolClientName: 'voting-UserPoolClientName'
    });
+   
+   /*
    const identityPool = new cognito.CfnIdentityPool(this, 'voting-IdentityPool', {
        allowUnauthenticatedIdentities: true,
        cognitoIdentityProviders: [{
@@ -112,7 +129,6 @@ export class AStack extends cdk.Stack {
            providerName: userPool.userPoolProviderName,
        }]
    });
-
    const unauthenticatedRole = new iam.Role(this, 'CognitoDefaultUnauthenticatedRole', {
        assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
            "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
@@ -127,6 +143,9 @@ export class AStack extends cdk.Stack {
        ],
        resources: ["*"],
    }));
+
+   
+
    const authenticatedRole = new iam.Role(this, 'CognitoDefaultAuthenticatedRole', {
        assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
            "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
@@ -149,7 +168,7 @@ export class AStack extends cdk.Stack {
            'authenticated': authenticatedRole.roleArn
        }
    });
-
+*/
  }
 
 }
