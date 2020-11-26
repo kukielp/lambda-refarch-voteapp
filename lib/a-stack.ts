@@ -4,6 +4,8 @@ import * as dynamodb from '@aws-cdk/aws-dynamodb';
 import * as lambda from '@aws-cdk/aws-lambda';
 import * as cognito from '@aws-cdk/aws-cognito';
 import * as apigw from '@aws-cdk/aws-apigateway';
+import * as iam from '@aws-cdk/aws-iam';
+import { Effect, PolicyStatement } from '@aws-cdk/aws-iam';
 
 const pinpoint =  require("@aws-cdk/aws-pinpoint");
 
@@ -12,7 +14,7 @@ export class AStack extends cdk.Stack {
     super(scope, id, props);
 
 
-    this.build_cognito();
+    this.build_cognito(scope);
 
 
   
@@ -92,38 +94,25 @@ export class AStack extends cdk.Stack {
 
 
   
-  private build_cognito() {
+  private build_cognito(scope: cdk.App) {
     
     //cognito
-/*
-   const userPool = new cognito.UserPool(this, 'voting-UserPool', {
-       signInType: SignInType.EMAIL,
-       autoVerifiedAttributes: [
-           UserPoolAttribute.EMAIL
-       ]
-   });
-   const cfnUserPool = userPool.node.defaultChild as cognito.CfnUserPool;
-   cfnUserPool.policies = {
-       passwordPolicy: {
-           minimumLength: 8,
-           requireLowercase: false,
-           requireNumbers: false,
-           requireUppercase: false,
-           requireSymbols: false
-       }
-   };
+
+   const userPool = new cognito.UserPool(this, 'voting-UserPool');
+
    const userPoolClient = new cognito.UserPoolClient(this, 'voting-UserPoolClient', {
        generateSecret: false,
        userPool: userPool,
        userPoolClientName: 'voting-UserPoolClientName'
    });
    const identityPool = new cognito.CfnIdentityPool(this, 'voting-IdentityPool', {
-       allowUnauthenticatedIdentities: false,
+       allowUnauthenticatedIdentities: true,
        cognitoIdentityProviders: [{
            clientId: userPoolClient.userPoolClientId,
            providerName: userPool.userPoolProviderName,
        }]
    });
+
    const unauthenticatedRole = new iam.Role(this, 'CognitoDefaultUnauthenticatedRole', {
        assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
            "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
@@ -160,7 +149,7 @@ export class AStack extends cdk.Stack {
            'authenticated': authenticatedRole.roleArn
        }
    });
-*/
+
  }
 
 }
