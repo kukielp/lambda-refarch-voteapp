@@ -16,7 +16,7 @@ exports.handler = function(event, context) {
     /* Add randomness to our value to help spread across partitions */
     votedForHash = votedFor + "." + Math.floor((Math.random() * 10) + 1).toString();
     /* ...updateItem into our DynamoDB database */
-    var tableName = 'vote4cdk-VoteAppAF22FC8B-1NRB8IJ90YVXI';
+    var tableName = 'vote4cdk-VoteAppAF22FC8B-DQ5ZQQQ95X8O';
     dynamodb.updateItem({
       'TableName': tableName,
       'Key': { 'VotedFor' : { 'S': votedForHash }},

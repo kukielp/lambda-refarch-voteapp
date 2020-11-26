@@ -31,7 +31,7 @@ exports.handler = function(event, context) {
     // Update the aggregation table with the total of RED, GREEN, and BLUE
     // votes received from this series of updates
 
-    var aggregatesTable = 'VoteAppAggregates';
+    var aggregatesTable = 'vote4cdk-VoteAppAF22FC8B-DQ5ZQQQ95X8O';
     if (totalRed > 0) updateAggregateForColor("RED", totalRed);
     if (totalBlue > 0) updateAggregateForColor("BLUE", totalBlue);
     if (totalGreen > 0) updateAggregateForColor("GREEN", totalGreen);
