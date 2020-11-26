@@ -7,13 +7,16 @@ exports.handler = function(event, context) {
   var dynamodb = new AWS.DynamoDB({apiVersion: '2012-08-10', region: 'us-east-1'});
 
   /* Make sure we have a valid vote (one of [RED, GREEN, BLUE]) */
+  console.log("-----------------");
   console.log(event);
+  console.log("-----------------");
+  
   var votedFor = event['Body'].toUpperCase().trim();
   if (['RED', 'GREEN', 'BLUE'].indexOf(votedFor) >= 0) {
     /* Add randomness to our value to help spread across partitions */
     votedForHash = votedFor + "." + Math.floor((Math.random() * 10) + 1).toString();
     /* ...updateItem into our DynamoDB database */
-    var tableName = 'VoteApp';
+    var tableName = 'vote4cdk-VoteAppAF22FC8B-1NRB8IJ90YVXI';
     dynamodb.updateItem({
       'TableName': tableName,
       'Key': { 'VotedFor' : { 'S': votedForHash }},
