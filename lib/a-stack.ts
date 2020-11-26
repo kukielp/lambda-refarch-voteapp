@@ -12,13 +12,12 @@ export class AStack extends cdk.Stack {
     super(scope, id, props);
 
 
-    //cognito
-    const idp = new cognito.CfnIdentityPool(this, "voting-cognito", {
-      //allow access to unauthenticated identities
-      allowUnauthenticatedIdentities: true
-    });
+    this.build_cognito();
+
+
+  
     //this is needed by the web UI
-    var identity_pool_id = idp.openIdConnectProviderArns;
+  //  var identity_pool_id = idp.openIdConnectProviderArns;
 
     //dynamo tables
     const VotesTable = new dynamodb.Table(this, 'VoteApp', {
@@ -65,6 +64,80 @@ export class AStack extends cdk.Stack {
     const topic = new sns.Topic(this, 'Topic', {
       displayName: 'Pinpoint Incomming subscription topic'
     });
+
+  };
+
+
+  private build_cognito() {
+    
+       //cognito
+/*
+      const userPool = new cognito.UserPool(this, 'voting-UserPool', {
+          signInType: SignInType.EMAIL,
+          autoVerifiedAttributes: [
+              UserPoolAttribute.EMAIL
+          ]
+      });
+      const cfnUserPool = userPool.node.defaultChild as cognito.CfnUserPool;
+      cfnUserPool.policies = {
+          passwordPolicy: {
+              minimumLength: 8,
+              requireLowercase: false,
+              requireNumbers: false,
+              requireUppercase: false,
+              requireSymbols: false
+          }
+      };
+      const userPoolClient = new cognito.UserPoolClient(this, 'voting-UserPoolClient', {
+          generateSecret: false,
+          userPool: userPool,
+          userPoolClientName: 'voting-UserPoolClientName'
+      });
+      const identityPool = new cognito.CfnIdentityPool(this, 'voting-IdentityPool', {
+          allowUnauthenticatedIdentities: false,
+          cognitoIdentityProviders: [{
+              clientId: userPoolClient.userPoolClientId,
+              providerName: userPool.userPoolProviderName,
+          }]
+      });
+      const unauthenticatedRole = new iam.Role(this, 'CognitoDefaultUnauthenticatedRole', {
+          assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
+              "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
+              "ForAnyValue:StringLike": { "cognito-identity.amazonaws.com:amr": "unauthenticated" },
+          }, "sts:AssumeRoleWithWebIdentity"),
+      });
+      unauthenticatedRole.addToPolicy(new PolicyStatement({
+          effect: Effect.ALLOW,
+          actions: [
+              "mobileanalytics:PutEvents",
+              "cognito-sync:*"
+          ],
+          resources: ["*"],
+      }));
+      const authenticatedRole = new iam.Role(this, 'CognitoDefaultAuthenticatedRole', {
+          assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
+              "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
+              "ForAnyValue:StringLike": { "cognito-identity.amazonaws.com:amr": "authenticated" },
+          }, "sts:AssumeRoleWithWebIdentity"),
+      });
+      authenticatedRole.addToPolicy(new PolicyStatement({
+          effect: Effect.ALLOW,
+          actions: [
+              "mobileanalytics:PutEvents",
+              "cognito-sync:*",
+              "cognito-identity:*"
+          ],
+          resources: ["*"],
+      }));
+      const defaultPolicy = new cognito.CfnIdentityPoolRoleAttachment(this, 'DefaultValid', {
+          identityPoolId: identityPool.ref,
+          roles: {
+              'unauthenticated': unauthenticatedRole.roleArn,
+              'authenticated': authenticatedRole.roleArn
+          }
+      });
+
+      */
 
   }
 }
