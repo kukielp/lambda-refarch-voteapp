@@ -14,7 +14,7 @@ export class AStack extends cdk.Stack {
     super(scope, id, props);
 
 
-    this.build_cognito(scope);
+    //this.build_cognito(scope);
 
 
   
