@@ -15,28 +15,19 @@ export class AStack extends cdk.Stack {
   constructor(scope: cdk.App, id: string, props?: cdk.StackProps) {
     super(scope, id, props);
 
-
-    //this.build_cognito(scope);
-
-
-  
-    //this is needed by the web UI
-  //  var identity_pool_id = idp.openIdConnectProviderArns;
-
     //dynamo tables
     const VotesTable = new dynamodb.Table(this, 'VoteApp', {
       partitionKey: { name: 'VotedFor', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST,
       stream: dynamodb.StreamViewType.NEW_IMAGE // make sure stream is configured
     });
-  
 
     const AggregatesTable = new dynamodb.Table(this, 'AggregatesTable', {
       partitionKey: { name: 'VotedFor', type: dynamodb.AttributeType.STRING },
       billingMode: dynamodb.BillingMode.PAY_PER_REQUEST
     });
 
-    
+    //lambda functions
     const lambdaAggregateVote = new lambda.Function(this, 'VoteAppAggregateVotes', {
       runtime: lambda.Runtime.NODEJS_10_X,
       handler: 'app.handler',
@@ -81,6 +72,7 @@ export class AStack extends cdk.Stack {
 
     //API Gateway
     // defines an API Gateway REST API resource backed by our "hello" function.
+//todo this is not workin 
     const mappingVTL = `{
         #foreach( $token in $input.path('$').split('&') )
             #set( $keyVal = $token.split('=') )
@@ -106,69 +98,4 @@ export class AStack extends cdk.Stack {
     const vote = api.root.addResource('vote');
     vote.addMethod('POST',lambdaIntegration);
   }
-
-
-  
-  private build_cognito(scope: cdk.App) {
-    
-    //cognito
-
-   const userPool = new cognito.UserPool(this, 'voting-UserPool');
-
-   const userPoolClient = new cognito.UserPoolClient(this, 'voting-UserPoolClient', {
-       generateSecret: false,
-       userPool: userPool,
-       userPoolClientName: 'voting-UserPoolClientName'
-   });
-   
-   /*
-   const identityPool = new cognito.CfnIdentityPool(this, 'voting-IdentityPool', {
-       allowUnauthenticatedIdentities: true,
-       cognitoIdentityProviders: [{
-           clientId: userPoolClient.userPoolClientId,
-           providerName: userPool.userPoolProviderName,
-       }]
-   });
-   const unauthenticatedRole = new iam.Role(this, 'CognitoDefaultUnauthenticatedRole', {
-       assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
-           "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
-           "ForAnyValue:StringLike": { "cognito-identity.amazonaws.com:amr": "unauthenticated" },
-       }, "sts:AssumeRoleWithWebIdentity"),
-   });
-   unauthenticatedRole.addToPolicy(new PolicyStatement({
-       effect: Effect.ALLOW,
-       actions: [
-           "mobileanalytics:PutEvents",
-           "cognito-sync:*"
-       ],
-       resources: ["*"],
-   }));
-
-   
-
-   const authenticatedRole = new iam.Role(this, 'CognitoDefaultAuthenticatedRole', {
-       assumedBy: new iam.FederatedPrincipal('cognito-identity.amazonaws.com', {
-           "StringEquals": { "cognito-identity.amazonaws.com:aud": identityPool.ref },
-           "ForAnyValue:StringLike": { "cognito-identity.amazonaws.com:amr": "authenticated" },
-       }, "sts:AssumeRoleWithWebIdentity"),
-   });
-   authenticatedRole.addToPolicy(new PolicyStatement({
-       effect: Effect.ALLOW,
-       actions: [
-           "mobileanalytics:PutEvents",
-           "cognito-sync:*",
-           "cognito-identity:*"
-       ],
-       resources: ["*"],
-   }));
-   const defaultPolicy = new cognito.CfnIdentityPoolRoleAttachment(this, 'DefaultValid', {
-       identityPoolId: identityPool.ref,
-       roles: {
-           'unauthenticated': unauthenticatedRole.roleArn,
-           'authenticated': authenticatedRole.roleArn
-       }
-   });
-*/
- }
-
 }

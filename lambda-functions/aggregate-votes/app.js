@@ -1,17 +1,17 @@
 console.log('Loading event');
-var AWS = require('aws-sdk');
-var dynamodb = new AWS.DynamoDB();
+const AWS = require('aws-sdk');
+const dynamodb = new AWS.DynamoDB();
 
 exports.handler = function(event, context) {
 
-    var totalRed = 0;
-    var totalGreen = 0;
-    var totalBlue = 0;
+    let totalRed = 0;
+    let totalGreen = 0;
+    let totalBlue = 0;
 
     event.Records.forEach(function(record) {
 
-        var votedForHash = record.dynamodb['NewImage']['VotedFor']['S'];
-        var numVotes = record.dynamodb['NewImage']['Votes']['N'];
+        let votedForHash = record.dynamodb['NewImage']['VotedFor']['S'];
+        let numVotes = record.dynamodb['NewImage']['Votes']['N'];
 
         // Determine the color on which to add the vote
         if (votedForHash.indexOf("RED") > -1) {
@@ -30,8 +30,8 @@ exports.handler = function(event, context) {
 
     // Update the aggregation table with the total of RED, GREEN, and BLUE
     // votes received from this series of updates
-
-    var aggregatesTable = 'vote4cdk-AggregatesTable0F8EFB12-G52M2F3XSUKY';
+//fix this it's hard coded.
+    const aggregatesTable = 'vote4cdk-AggregatesTable0F8EFB12-G52M2F3XSUKY';
     if (totalRed > 0) updateAggregateForColor("RED", totalRed);
     if (totalBlue > 0) updateAggregateForColor("BLUE", totalBlue);
     if (totalGreen > 0) updateAggregateForColor("GREEN", totalGreen);
